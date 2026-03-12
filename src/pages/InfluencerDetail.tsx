@@ -39,6 +39,7 @@ export default function InfluencerDetail() {
       </main>
     );
   }
+
   if (error || !inf) {
     return (
       <main className="min-h-screen flex flex-col justify-center items-center bg-background text-white px-4">
