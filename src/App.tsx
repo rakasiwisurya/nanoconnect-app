@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import About from "./pages/About";
+import InfluencerListing from "./pages/InfluencerListing";
+import InfluencerDetail from "./pages/InfluencerDetail";
+import OrderBooking from "./pages/OrderBooking";
+import AIRecommendations from "./pages/AIRecommendations";
+import TermsConditions from "./pages/TermsConditions";
+import AuthPages from "./pages/AuthPages";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <nav className="w-full flex justify-center gap-8 py-6 bg-background text-white text-lg font-semibold shadow">
+        <Link to="/">Beranda</Link>
+        <Link to="/about">Tentang</Link>
+        <Link to="/influencers">Influencer</Link>
+        <Link to="/ai-recommendations">AI Rekomendasi</Link>
+        <Link to="/terms">Syarat & Ketentuan</Link>
+        <Link to="/auth">Masuk</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/influencers" element={<InfluencerListing />} />
+        <Route path="/influencer/:id" element={<InfluencerDetail />} />
+        <Route path="/order" element={<OrderBooking />} />
+        <Route path="/ai-recommendations" element={<AIRecommendations />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/auth" element={<AuthPages />} />
+        <Route path="/register" element={<RegisterPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

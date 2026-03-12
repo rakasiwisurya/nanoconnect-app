@@ -37,6 +37,9 @@ booking workflow.
 - **Framework:** React.js + Vite
 - **Deployment:** Tencent EdgeOne Pages
 - **Development:** VS Code, EdgeOne CLI, IDE Plugin
+- **Icon:** Gunakan fontawesome sebagai icon
+- **CSS Framework:** Tailwind CSS
+- **Template:** Gunakan warna flat design dengan color pallete hitam dan turunannya
 
 ---
 
@@ -75,14 +78,16 @@ EdgeOne Pages
 
 ## Pages & Components
 
-    ├── Homepage
-    ├── About
-    ├── Influencer Listing
-    ├── Influencer Detail
-    ├── Order / Booking System
-    ├── AI Recommendations
-    ├── Terms & Conditions
-    └── Authentication Pages
+```
+├── Homepage (Bagian Hero, gunakan headline besar, dan jangan bagi 2 layar)
+├── About
+├── Influencer Listing
+├── Influencer Detail
+├── Order / Booking System
+├── AI Recommendations
+├── Terms & Conditions
+└── Authentication Pages
+```
 
 ---
 
