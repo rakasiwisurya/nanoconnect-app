@@ -58,7 +58,7 @@ export default function InfluencerListing() {
           {influencers.map((inf) => (
             <Card key={inf.id} className="flex flex-col items-center p-6">
               <img
-                src={inf.user?.avatar_url || "/default-avatar.png"}
+                src={inf.user?.avatar_url || "/default-avatar.jpg"}
                 alt={inf.user?.name || inf.username}
                 className="w-24 h-24 rounded-full mb-4 border-4 border-accent"
               />

@@ -25,7 +25,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/influencers" element={<InfluencerListing />} />
         <Route path="/influencer/:id" element={<InfluencerDetail />} />
-        <Route path="/order" element={<OrderBooking />} />
+        <Route path="/order/:id" element={<OrderBooking />} />
         <Route path="/ai-recommendations" element={<AIRecommendations />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/auth" element={<AuthPages />} />

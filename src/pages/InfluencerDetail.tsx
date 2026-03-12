@@ -59,7 +59,7 @@ export default function InfluencerDetail() {
     <main className="min-h-screen bg-background text-white px-4 py-12 flex flex-col items-center">
       <Card className="max-w-xl w-full flex flex-col items-center p-8">
         <img
-          src={inf.user?.avatar_url || "/default-avatar.png"}
+          src={inf.user?.avatar_url || "/default-avatar.jpg"}
           alt={inf.user?.name || inf.username}
           className="w-28 h-28 rounded-full mb-4 border-4 border-accent"
         />
@@ -87,7 +87,7 @@ export default function InfluencerDetail() {
           </a>
         )}
         <Link
-          to="/order"
+          to={`/order/${inf.id}`}
           className="w-full justify-center mt-2 px-8 py-3 rounded-lg font-bold transition flex items-center focus:outline-none focus:ring-2 focus:ring-accent bg-accent text-white hover:bg-primary cursor-pointer border-2 border-white shadow-lg shadow-white/20"
         >
           Booking <i className="fa-solid fa-calendar-check ml-2"></i>
